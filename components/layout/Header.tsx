@@ -7,21 +7,21 @@ import { Button } from '@/components/ui/button';
 export default function Header() {
   return (
     <header className="bg-white border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-[210px] px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex-shrink-0">
             <img src="/logo.png" alt="Digital Pylot" className="h-8" />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 mx-[210px]">
             <NavItem title="Hosting" />
             <NavItem title="Domain" />
-            <NavItem title="Digital Marketing" />
+            <NavItem title="Digital&nbsp;Marketing" />
             <NavItem title="Design" badge="28" />
             <NavItem title="Development" />
             <NavItem title="Addons" />
             <Link href="/contact" className="text-gray-700 hover:text-gray-900">
-              Contact Us
+            <NavItem title="Contact&nbsp;Us" />
             </Link>
           </nav>
 
@@ -39,7 +39,7 @@ function NavItem({ title, badge }: { title: string; badge?: string }) {
   return (
     <div className="relative group">
       <button className="flex items-center gap-1 text-gray-700 hover:text-gray-900">
-        <span>{title}</span>
+        {title}
         {badge && (
           <span className="ml-1 px-1.5 py-0.5 text-xs bg-orange-500 text-white rounded-full">
             {badge}

@@ -8,10 +8,15 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
+    extend: 
+    {
+      fontFamily: {
+        sans: ['var(--font-plus-jakarta-sans)'],
+      },
       backgroundImage: {
         'hero-pattern': "url('/bgHero.png')", // Corrected path
         'black-texture': "url('/black.png')",
+        'hosting-card': "url('/bg-cards.png')",
       },
       borderRadius: {
         lg: 'var(--radius)',
